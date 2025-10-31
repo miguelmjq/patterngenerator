@@ -7,12 +7,17 @@ class Patterns{
     public static void main(String[]args){
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("enter number of rows");
+        System.out.println("enter number of rows - stars");
         stars(scan.nextInt());
 
-        System.out.println("enter number of rows");
+        System.out.println("enter number of rows - triangle");
         triangle(scan.nextInt());
 
+        
+        System.out.println("enter starting number - odds");
+        odds(scan.nextInt());        
+
+        
         scan.close();
     }
 
@@ -36,7 +41,8 @@ class Patterns{
         }
     }
 
-    //not done to do 
+    //precon: an integer above 0
+    //poscon: a triangle of numbers
     public static void triangle(int rows){
         int n =0;
        
@@ -53,6 +59,19 @@ class Patterns{
         }
     }
 
+
+    public static void odds(int start){
+
+        for (int i =0;i<=start;i+=2){
+            int n = start-i;
+            for(int b =0; b<n; b++){
+                System.out.print(n);
+                
+            }
+            System.out.println("");
+        }
+        
+    }
 
 
 }
