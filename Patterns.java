@@ -13,11 +13,15 @@ class Patterns{
         System.out.println("enter number of rows - triangle");
         triangle(scan.nextInt());
 
-        
         System.out.println("enter starting number - odds");
         odds(scan.nextInt());        
 
-        
+        System.out.println("enter max number - maxE");
+        eo(scan.nextInt());  
+
+        System.out.println("enter number of rows - pyramid");
+        pyramid(scan.nextInt());  
+
         scan.close();
     }
 
@@ -59,7 +63,8 @@ class Patterns{
         }
     }
 
-
+    //precon: integer above 0
+    //poscon: 
     public static void odds(int start){
 
         for (int i =0;i<=start;i+=2){
@@ -73,5 +78,15 @@ class Patterns{
         
     }
 
+    public static void eo(int maxE){
 
+
+
+    }
+
+    public static void pyramid(int rows){
+
+
+
+    }
 }
