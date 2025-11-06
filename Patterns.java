@@ -8,13 +8,13 @@ class Patterns{
 
         Scanner scan = new Scanner(System.in);
         System.out.println("enter number of rows - stars");
-        stars(scan.nextInt());
+      //  stars(scan.nextInt());
 
         System.out.println("enter number of rows - triangle");
-        triangle(scan.nextInt());
+        //triangle(scan.nextInt());
 
         System.out.println("enter starting number - odds");
-        odds(scan.nextInt());        
+     //   odds(scan.nextInt());        
 
         System.out.println("enter max number - maxE");
         eo(scan.nextInt());  
@@ -29,7 +29,7 @@ class Patterns{
     //  precon: a non 0 integer 
     //  poscon: a pattern of stars with the specified number of rows
     public static void stars(int rows){ 
-
+        
         
         int n =0;
         int b = 0;
@@ -64,7 +64,7 @@ class Patterns{
     }
 
     //precon: integer above 0
-    //poscon: 
+    //poscon: all the numbers from start to 1 going down by 2 each time
     public static void odds(int start){
 
         for (int i =0;i<=start;i+=2){
@@ -78,14 +78,32 @@ class Patterns{
         
     }
 
+    //precon: integer above 0
+    //poscon: 
     public static void eo(int maxE){
+
+        String letter = "E";
+
+        for (int i =0; i<maxE;i++){
+            if (maxE%2==0){
+                letter ="O";
+                
+            }
+            else if (maxE%2!=0){
+                letter ="E";
+            }               
+        }
+
 
 
 
     }
 
     public static void pyramid(int rows){
-
+        for (int i=1; i<rows;i+=2){
+            int n = (rows*2)-i;
+            
+        }
 
 
     }
