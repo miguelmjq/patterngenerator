@@ -9,19 +9,19 @@ class Patterns {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("enter number of rows - stars");
-        // stars(scan.nextInt());
+         stars(scan.nextInt());
 
         System.out.println("enter number of rows - triangle");
-        // triangle(scan.nextInt());
+         triangle(scan.nextInt());
 
         System.out.println("enter starting number - odds");
-        // odds(scan.nextInt());
+         odds(scan.nextInt());
 
         System.out.println("enter max number - maxE");
-        eo(scan.nextInt());
+         eo(scan.nextInt());
 
         System.out.println("enter number of rows - pyramid");
-        pyramid(scan.nextInt());
+         pyramid(scan.nextInt());
 
         scan.close();
     }
@@ -45,7 +45,7 @@ class Patterns {
     }
 
     // precon: an integer above 0
-    // poscon: a triangle of numbers
+    // poscon: a triangle of numbers with the amount of rows specified
     public static void triangle(int rows) {
         int n = 0;
 
@@ -78,7 +78,7 @@ class Patterns {
     }
 
     // precon: integer above 0
-    // poscon:
+    // poscon: pyramid of E and O alternating each time
     public static void eo(int maxE) {
 
         String letter = "O";
@@ -101,7 +101,7 @@ class Patterns {
             System.out.println("");
         }
 
-        for (int i=maxE-1;i>=0;i--){
+        for (int i = maxE - 1; i >= 0; i--) {
             int b = 0;
             while (b < i) {
                 System.out.print(letter);
@@ -115,12 +115,28 @@ class Patterns {
             System.out.println("");
         }
     }
-
+    
+    // precon: integer above 0
+    // poscon: prints an upside down pyramid of numbers with the amount of rows specified.
     public static void pyramid(int rows) {
-        for (int i = 1; i < rows; i += 2) {
-            int n = (rows * 2) - i;
 
+        for (int i = 1; i <= rows; i++) {
+            int b = i;
+            int n = (rows * 2) - b;
+            int c = 0;
+            while (c < i) {
+                System.out.print(" ");
+                c++;
+            }
+            while (b <= n) {
+
+                System.out.print(i);
+                b++;
+            }
+            System.out.println();
         }
 
     }
+
 }
+
